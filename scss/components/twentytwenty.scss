@@ -1,0 +1,68 @@
+.twentytwenty-container {
+  z-index: 0;
+  overflow: hidden;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none; 
+
+  .first,
+  .last {
+    width: 100%;
+    position: absolute!important;
+    background: #fff;
+    top: 0;
+    display: block;
+  }
+}
+
+.twentytwenty-before {
+  z-index: 20; 
+}
+
+.twentytwenty-after {
+  z-index: 10; 
+}
+
+.twentytwenty-handle {
+  height: 96px;
+  width: 94px;
+  position: absolute;
+  left: 50%;
+  top: 122px;
+  margin-left: -51px;
+  background: url('../images/controls/comparsion-arrow.png') no-repeat;
+  z-index: 40;
+  cursor: pointer; 
+  display: none;
+
+  &--sticked {
+    position: fixed;
+  }
+
+  @include screen(desktop) {
+    display: block;
+  }
+
+  &:before,
+  &:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    background: $xllightGray;
+    z-index: 30;
+    width: 1px;
+    height: 9999px;
+    left: 50%;
+    margin-left: -1.5px; 
+  }
+
+  &:before {
+    bottom: 50%;
+    margin-bottom: 35px;
+  }
+
+  &:after {
+    top: 50%;
+    margin-top: 35px;
+  }
+}

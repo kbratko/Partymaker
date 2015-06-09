@@ -1,0 +1,350 @@
+.form__line {
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+  position: relative;
+
+  &.animate-1 {
+    -webkit-animation-duration: 1s;
+  }
+
+  &.animate-2 {
+    -webkit-animation-duration: 1.5s;
+  }
+
+  &.animate-3 {
+    -webkit-animation-duration: 2s;
+  }
+
+  &.animate-4 {
+    -webkit-animation-duration: 2.5s;
+  }
+
+  &.animate-5 {
+    -webkit-animation-duration: 3s;
+  }
+
+  .form__line-inner {
+    padding: 0 15px;
+    height: 76px;
+    display: table;
+    width: 100%;
+    font-family: $light;
+    max-width: 780px;
+    margin: 0 auto;
+    position: relative;
+
+    &:before {
+      content: "";
+      display: block;
+      height: 1px;
+      background: $lightGray;
+      width: 100%;
+      left: 0;
+      top: -2px;
+      position: absolute;
+    }
+
+    @include screen(tablet) {
+      height: 101px;
+      padding: 0;
+    }
+  }
+
+  &:last-of-type {
+    .form__line-inner {
+        &:after {
+        content: "";
+        display: block;
+        height: 1px;
+        background: $lightGray;
+        width: 100%;
+        left: 0;
+        bottom: 1px;
+        position: absolute;
+      }
+    }
+  }
+
+  &--range {
+    .form__line-inner {
+      display: block;
+      padding-top: 20px;
+
+      .form__section {
+        display: block;
+        width: 100%;
+        padding: 0;
+      }
+
+      .form__range {
+        margin-top: 20px;
+        width: 100%;
+      }
+
+      .range-labels {
+        margin-top: 20px;
+        padding-bottom: 15px;
+        font-size: 14px;
+        @include clearfix();
+
+        .range-label--left {
+          float: left;
+          display: block;
+        }
+
+        .range-label--right {
+          float: right;
+          display: block;
+        }
+
+        .currency {
+          color: $lightGreen;
+
+          @include screen(tablet) {
+            color: $main;
+          }
+        }
+      }
+    }
+
+    @include screen(tablet) {
+      .form__line-inner {
+        display: table;
+        padding-top: 0;
+
+        .form__section {
+          display: table-cell;
+
+          &--label {
+            width: 38%;
+          }
+
+          &--input {
+            padding-top: 27px;
+          }
+        }
+      }
+    }
+  }
+
+  .tooltip {
+    position: absolute;
+    right: 16px;
+
+    @include screen(tablet) {
+      position: relative;
+      right: 0;
+      top: 3px;
+      margin-left: 10px;
+    }
+  }
+
+  .form__section {
+    display: table-cell;
+    vertical-align: middle;
+
+    &--label {
+      width: 33.4%;
+      padding-right: 10px;
+
+      @include screen(tablet) {
+        width: 38%;
+      }
+    }
+
+    &--input {
+      width: 60%;
+      padding-right: 20px;
+    }
+
+    &--done {
+      width: 6.6%;
+
+      @include screen(tablet) {
+        width: 2%;
+      }
+    }
+  }
+
+  .form__label {
+    color: $darkGray;
+    text-transform: uppercase;
+
+    @include screen(tablet) {
+      font-size: 14px;
+
+      &[for="phone"],
+      &[for="email"],
+      &[for="password"] {
+        padding: 20px 0 20px 60px;
+      }
+
+      &[for="phone"] {
+        background: url("../images/icons/icon-phone.png") no-repeat 10px 38%;
+
+        &:after {
+          content: " number";
+        }
+      }
+
+      &[for="email"] {
+        background: url("../images/icons/icon-envelope.png") no-repeat 3px 47%;
+      }
+
+      &[for="password"] {
+        background: url("../images/icons/icon-lock.png") no-repeat 7px 46%;
+      }
+    }
+  }
+
+  .form__input {
+    font-size: 17px;
+    font-family: $ultraLight;
+
+    @include screen(tablet) {
+      font-size: 32px;
+    }
+  }
+
+  .form__done {
+    width: 18px;
+    height: 18px;
+    background: url("../images/icons/icon-done-2x.png") no-repeat;
+    background-size: 18px 18px;
+    display: none;
+
+    @include screen(tablet) {
+      width: 30px;
+      height: 30px;
+      background: url("../images/icons/icon-done-768.png") no-repeat;
+    }
+  }
+
+  .form__error {
+    color: $regularWhite;
+    font-size: 11px;
+    display: none;
+  }
+
+  &--hightlight {
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,.09);
+    border-bottom: 1px solid $lightGray;
+    border-top: 1px solid $lightGray;
+    z-index: 1;
+
+    .form__line-inner:before,
+    .form__line-inner:after {
+      display: none!important;
+    }
+  }
+
+  &--error {
+    background: $regularRed;
+    border-bottom: 1px solid $regularRed;
+    border-top: 1px solid $regularRed;
+
+    .form__line-inner:before,
+    .form__line-inner:after {
+      display: none!important;
+    }
+
+    .form__label {
+      color: $regularWhite;
+
+      @include screen(tablet) {
+        &[for="phone"] {
+          background: url("../images/icons/icon-phone-white.png") no-repeat 10px 38%;
+        }
+
+        &[for="email"] {
+          background: url("../images/icons/icon-envelope-white.png") no-repeat 3px 47%;
+        }
+
+        &[for="password"] {
+          background: url("../images/icons/icon-lock-white.png") no-repeat 7px 46%;
+        }
+      }
+    }
+
+    .form__error {
+      display: block;
+
+      @include screen(tablet) {
+        font-size: 24px;
+      }
+    }
+    
+    .tooltip {
+      background: url("../images/icons/icon-help-2x-white.png") no-repeat;
+      background-size: 18px 18px;
+
+      @include screen(tablet) {
+        background-size: 100% 100%;
+      }
+    }
+
+    @include screen(tablet) {
+      ::-webkit-input-placeholder {color: transparent;}
+      :-moz-placeholder {color: transparent;}
+      ::-moz-placeholder {color: transparent;}
+      :-ms-input-placeholder {color: transparent;}  
+
+      .form__error {
+        position: absolute;
+        top: 38px;
+        z-index: 0;
+      }
+
+      .form__input {
+        position: relative;
+        z-index: 1;
+      }
+
+      .form__input:focus + .form__error{
+        display: none;
+      }
+    }
+  }
+
+  &--done {
+    .form__done {
+      display: block;
+    }
+
+    .tooltip {
+      display: none;
+
+      @include screen(tablet) {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.form__file {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  
+  .form__file-hidden {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    left: 0;
+
+    input {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      transform: scale(20);
+      letter-spacing: 10em;     /* IE 9 fix */
+      -ms-transform: scale(20); /* IE 9 fix */
+      opacity: 0;
+      cursor: pointer
+    }
+  }
+}

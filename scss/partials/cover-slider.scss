@@ -1,0 +1,147 @@
+.cover-slider {
+  height: 344px;
+  position: relative;
+  color: $regularWhite;
+  overflow: hidden;
+
+  @include screen(tablet) {
+    height: 284px;
+  }
+
+  @include screen(xDesktop) {
+    height: 402px;
+  }
+
+  .slick-track {
+    height: 344px;
+
+    @include screen(tablet) {
+      height: 284px;
+    }
+
+    @include screen(xDesktop) {
+      height: 402px;
+    }
+
+    img {
+      position: absolute;
+      min-width: 100%;
+      width: auto;
+      height: auto;
+      max-width: none;
+      z-index: 0;
+      min-height: 100%;
+    }
+  }
+
+  .slick-dots {
+    position: absolute;
+    bottom: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    z-index: 2;
+    width: 100%;
+    height: 10px;
+    bottom: 27px;
+
+    @include screen(tablet) {
+      bottom: 22px;
+    }
+
+    @include screen(xDesktop) {
+      bottom: 26px;
+    }
+
+    li {
+      display: inline-block;
+      border: 2px solid transparent;
+      text-indent: -9999px;
+      width: 10px;
+      height: 10px;
+      @include border-radius(50%);
+      margin: 0 10px;
+      opacity: .8;
+      background: $regularWhite;
+      cursor: pointer;
+      vertical-align: middle;
+
+      @include screen(tablet) {
+        margin: 0 15px;
+      }
+
+      &.slick-active {
+        opacity: 1;
+        background: transparent;
+        border: 2px solid $regularWhite;
+
+        @include screen(tablet) {
+          width: 14px;
+          height: 14px;
+          border-width: 1px;
+        }
+      }
+    }
+  }
+
+  .slide__title,
+  .slide_description {
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    width: 100%;
+  }
+
+  .slide__title {
+    font-size: 32px;
+    font-family: $light;
+    top: 123px;
+
+    @include screen(tablet) {
+      font-size: 52px;
+      top: 101px;
+    }
+
+    @include screen(xDesktop) {
+      font-size: 72px;
+      top: 135px;
+    }
+  }
+
+  .slide_description {
+    font-size: 18px;
+    top: 213px;
+
+    @include screen(tablet) {
+      font-size: 20px;
+      top: 178px;
+    }
+
+    @include screen(xDesktop) {
+      font-size: 24px;
+      top: 231px;
+    }
+  }
+
+  .slick-prev,
+  .slick-next {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 94px;
+    margin-top: -47px;
+    text-indent: -9999px;
+    background: url("../images/controls/cover-slider-arrows.png") no-repeat;
+  }
+
+  .slick-prev {
+    left: 24px;
+    background-position: 0 0;
+  }
+
+  .slick-next {
+    right: 24px;
+    background-position: 100% 100%;
+  }
+}

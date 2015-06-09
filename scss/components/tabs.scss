@@ -1,0 +1,117 @@
+.tabs {
+  .tabs__head {
+    position: relative;
+    font-size: 0;
+
+    @include screen(tablet) {
+      margin-bottom: 14px;
+    }
+
+    @include screen(desktop) {
+      display: none;
+    }
+
+    &--sticked {
+      position: fixed;
+      top: 0;
+      background: rgba(255,255,255,.97);
+      z-index: 10;
+      width: 100%;
+    }
+
+    .tabs__item {
+      display: inline-block;
+      font-size: 20px;
+      font-family: $light;
+      color: $xxlightGray;
+      vertical-align: top;
+      position: relative;
+      width: 50%;
+      padding: 13px 0px 11px 14px;
+
+      @include screen(tablet) {
+        width: calc(50% - 18px);
+        font-size: 32px;
+        padding: 13px 0 13px 36px;
+      }
+
+      &--active {
+        color: $main;
+      }
+    }
+  }
+
+  .tabs__body {
+
+    .tabs__content {
+      overflow: hidden;
+      height: 0px;
+      position: relative;
+      opacity: 0;
+      transition: opacity 500ms;
+      @include clearfix;
+
+      @media(max-width: 1024px) {
+        & {
+          clip: auto!important;
+        }
+      }
+
+      @include screen(tablet) {
+        padding: 0 17px;
+      }
+
+      @include screen(desktop) {
+        padding: 0;
+        opacity: 1;
+        overflow: visible;
+        height: auto;
+        transition: none;
+
+        &.tabs__content--artists .tabs__title {
+          text-align: right;
+        }
+      }
+
+      &--active {
+        overflow: visible;
+        height: auto;
+        opacity: 1;
+        transition: opacity 500ms;
+      }
+
+      .tabs__title {
+        font-size: 32px;
+        padding: 13px 0 27px 24px;
+        font-family: $light;
+        color: $main;
+        display: none;
+
+        &--sticked {
+          position: fixed;
+          font-size: 32px;
+          top: 0;
+          width: 100%;
+          z-index: 11;
+          background: rgba(255,255,255,.97);
+        }
+
+        @include screen(desktop) {
+          display: block;
+          padding-left: 116px;
+          padding-right: 116px;
+        }
+
+        @include screen(xDesktop) {
+          padding: 35px 140px 41px 140px;
+          font-size: 52px;
+
+          &--sticked {
+            font-size: 32px;
+            padding: 14px 140px 14px 140px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+.form__input.selectize-control {
+  height: 78px;
+
+  @include screen(tablet) {
+    height: 100px;
+  }
+
+  .selectize-input {
+    height: 98%;
+    line-height: 78px;
+    padding: 0;
+    font-size: 17px;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: transparent;
+
+    &.input-active {
+      background: transparent;
+    }
+
+    @include screen(tablet) {
+      height: 99.4%;
+      font-size: 32px;
+      line-height: 100px;
+    }
+
+    &:after {
+      display: none;
+    }
+
+    input {
+      font-size: 17px;
+
+      @include screen(tablet) {
+        font-size: 32px;
+      }
+    }
+
+    &.input-active {
+      width: 112%;
+    }
+  }
+
+  .selectize-dropdown {
+    padding: 11px 0;
+    width: 208%!important;
+    margin-left: -72%;
+
+    @include screen(tablet) {
+      margin: 1px 0 0 -46px;
+      width: 127%!important;
+    }
+
+    .selectize-dropdown-content {
+      max-height: 117px;
+
+      @include screen(tablet) {
+        max-height: 200px;
+      }
+    }
+
+    .option {
+      padding: 13px 46px;
+    }
+  }
+}

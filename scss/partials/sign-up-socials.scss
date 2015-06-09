@@ -1,0 +1,143 @@
+.socials {
+  @include clearfix();
+
+  @include screen(desktop) {
+    display: table;
+  }
+
+  .social {
+    background-color: $xlightGray;
+    background-repeat: no-repeat;
+    padding: 101px 28px 17px;
+    margin-bottom: 4px;
+    display: block;
+    text-align: center;
+    font-family: $light;
+    transition: background-color .5s ease;
+
+    &:hover {
+      text-decoration: none;
+      background-color: $xxxxlightGray;
+    }
+
+    @include screen(tablet) {
+      padding: 35px 30px 44px 38%;
+      text-align: left;
+      margin-bottom: 4px;
+    }
+
+    @include screen(desktop) {
+      padding: 153px 28px 17px;
+      text-align: center;
+      display: table-cell;
+      width: 33.5%;
+      border-right: 5px solid $regularWhite;
+
+      &:last-child {
+        border: 0;
+      }
+    }
+
+    &--soundcloud {
+      background-image: url("../images/icons/icon-soundcloud-2x.png");
+      background-size: 101px 44px;
+      background-position: 50% 31px;
+
+      @include screen(tablet) {
+        background-size: 142px 61px;
+        background-position: 78px 48%;
+      }
+
+      @include screen(desktop) {
+        background-position: 51% 53px;
+      }
+    }
+
+    &--facebook {
+      background-image: url("../images/icons/icon-facebook-2x.png");
+      background-size: 62px 62px;
+      background-position: 50% 20px;
+
+      @include screen(tablet) {
+        background-size: 86px 86px;
+        background-position: 106px 48%;
+      }
+
+      @include screen(desktop) {
+        background-position: 50% 40px;
+      }
+    }
+
+    &--instagramm {
+      background-image: url("../images/icons/icon-instagram-2x.png");
+      background-size: 62px 62px;
+      background-position: 50% 22px;
+
+      @include screen(tablet) {
+        background-size: 86px 86px;
+        background-position: 106px 47%;
+      }
+
+      @include screen(desktop) {
+        background-position: 50% 41px;
+      }
+    }
+
+    .social__name {
+      font-size: 24px;
+      position: relative;
+      display: inline-block;
+
+      @include screen(tablet) {
+        font-size: 32px;
+      }
+
+      .social__connected {
+        display: none;
+        background: $lightGreen url("../images/icons/icon-connected.png") no-repeat 7px 50%;
+        padding: 2px 8px 2px 24px;
+        font-size: 12px;
+        font-family: $regular;
+        color: $regularWhite;
+        @include border-radius(15px);
+        position: absolute;
+        top: -2px;
+        right: -100px;
+
+        @include screen(tablet) {
+          display: block;
+        }
+      }
+    }
+
+    .social__description {
+      font-size: 16px;
+      display: block;
+      margin-top: 8px;
+
+      @include screen(tablet) {
+        font-size: 18px;
+      }
+
+      @include screen(desktop) {
+        margin: 13px 20px 27px;
+      }
+    }
+  }
+}
+
+.social__info {
+  margin: 30px 22px;
+  text-align: center;
+  font-size: 14px;
+  font-family: $light;
+  color: $xxxxdarkGray;
+
+  @include screen(tablet) {
+    font-size: 16px;
+  }
+
+  @include screen(desktop) {
+    margin-top: 19px;
+  }
+}

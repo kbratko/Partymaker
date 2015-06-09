@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge" />
+
+  <title>Partymaker</title>
+
+  <link rel="stylesheet" href="bower_components/normalize-css/normalize.css" />
+  <link rel="stylesheet" href="bower_components/tooltipster/css/tooltipster.css" />
+  <link rel="stylesheet" href="bower_components/animate.css/animate.css" />
+  <link rel="stylesheet" href="bower_components/jquery-ui/themes/base/jquery-ui.css" />
+  <link rel="stylesheet" href="bower_components/selectize/dist/css/selectize.css" />
+
+  <link rel="stylesheet" href="fonts/fonts.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/tooltipster/js/jquery.tooltipster.min.js"></script>
+  <script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
+  <script src="bower_components/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+  <script src="bower_components/selectize/dist/js/standalone/selectize.min.js"></script>
+
+  <script src="js/checkbox.js"></script>
+  <script src="js/partials/sign-up.js"></script>
+  <script src="js/script.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header header--sign-up">
+      <a href="#" class="cancel">Cancel</a>
+      <p>I'm artist</p>
+    </header>
+
+    <form class="sign-up sign-up--step-3 sign-up--step-active animated slideInLeft">
+      <h2 class="sign-up__title">Almost done! Get your profile started</h2>
+      <div class="change-cover">
+        <div class="change-cover__inner">
+          <div class="cover__image">
+            <div class="form__file add-cover">
+              <label for="cover">Change Cover Image</label>
+              <div class="form__file-hidden">
+                <input type="file" id="cover" />
+              </div>
+            </div>
+          </div>
+          <!-- The example how any uploaded cover will take place. -->
+          <!-- <img src="http://mlkshk.com/r/X96U.gif" alt="" class="change-cover__image" /> -->
+        </div>
+        <div class="form__file add-avatar">
+          <div class="form__file-hidden">
+            <input type="file" id="cover" />
+          </div>
+          <!-- The example how any uploaded image will take place into circle. click on this image also calls choose file dialog -->
+          <!--img src="http://inspired.com.ua/wp-content/uploads/2014/12/05d8e97450a4564f4ca3d53c7a1544e9.png" alt="" /-->
+        </div>
+      </div>
+
+      <div class="form__line animated slideInLeft animate-1">
+        <div class="form__line-inner">
+          <div class="form__section form__section--label">
+            <label for="name" class="form__label">name</label>
+            <span class="tooltip" title="This is how you’ll be known on ServiceName. Most people use their real name or musical alias."></span>
+          </div>
+          <div class="form__section form__section--input">
+            <input type="text" id="name" class="form__input" placeholder="Enter your name" />
+            <span class="form__error">Don’t forget to enter your name</span>
+          </div>
+          <div class="form__section form__section--done">
+            <span class="form__done"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="form__line form__line--genre animated slideInLeft animate-2">
+        <div class="form__line-inner">
+          <div class="form__section form__section--label">
+            <label for="genre" class="form__label">genre</label>
+            <span class="tooltip" title="Choose genres to which your sound belongs. This helps us keep djs, producers and live artists searchable on ServiceName."></span>
+          </div>
+          <div class="form__section form__section--input">
+            <div class="genres">
+              <div class="genres__section genres__section--visible">
+                <div class="checkbox">
+                  <span class="checkbox__control"><input type="checkbox" checked /></span>
+                  <span class="checkbox__label">Ambient</span>
+                </div>
+                <div class="checkbox">
+                  <span class="checkbox__control"><input type="checkbox" /></span>
+                  <span class="checkbox__label">Breaks</span>
+                </div>
+                <div class="checkbox">
+                  <span class="checkbox__control"><input type="checkbox" /></span>
+                  <span class="checkbox__label">Chill Out</span>
+                </div>
+              </div>
+              <div class="genres__section">
+                <div class="checkbox">
+                  <span class="checkbox__control"><input type="checkbox" checked /></span>
+                  <span class="checkbox__label">House</span>
+                </div>
+                <div class="checkbox">
+                  <span class="checkbox__control"><input type="checkbox" /></span>
+                  <span class="checkbox__label">DJ Tools</span>
+                </div>
+                <div class="checkbox">
+                  <span class="checkbox__control"><input type="checkbox" /></span>
+                  <span class="checkbox__label">Indie Dance</span>
+                </div>
+                <div class="checkbox">
+                  <span class="checkbox__control"><input type="checkbox" checked /></span>
+                  <span class="checkbox__label">Deep House</span>
+                </div>
+                <div class="checkbox">
+                  <span class="checkbox__control"><input type="checkbox" /></span>
+                  <span class="checkbox__label">Minimal</span>
+                </div>
+                <div class="checkbox">
+                  <span class="checkbox__control"><input type="checkbox" /></span>
+                  <span class="checkbox__label">Drum &amp; Bass</span>
+                </div>
+                <div class="checkbox">
+                  <span class="checkbox__control"><input type="checkbox" checked /></span>
+                  <span class="checkbox__label">Rock</span>
+                </div>
+                <div class="checkbox">
+                  <span class="checkbox__control"><input type="checkbox" /></span>
+                  <span class="checkbox__label">Dubstep</span>
+                </div>
+                <div class="checkbox">
+                  <span class="checkbox__control"><input type="checkbox" /></span>
+                  <span class="checkbox__label">Dub</span>
+                </div>
+                <div class="checkbox">
+                  <span class="checkbox__control"><input type="checkbox" checked /></span>
+                  <span class="checkbox__label">Psy Trance</span>
+                </div>
+                <div class="checkbox">
+                  <span class="checkbox__control"><input type="checkbox" /></span>
+                  <span class="checkbox__label">Electronic</span>
+                </div>
+                <div class="checkbox">
+                  <span class="checkbox__control"><input type="checkbox" /></span>
+                  <span class="checkbox__label">Reggae</span>
+                </div>
+                <div class="checkbox">
+                  <span class="checkbox__control"><input type="checkbox" checked /></span>
+                  <span class="checkbox__label">Funk </span>
+                </div>
+                <div class="checkbox">
+                  <span class="checkbox__control"><input type="checkbox" /></span>
+                  <span class="checkbox__label">Tech House</span>
+                </div>
+                <div class="checkbox">
+                  <span class="checkbox__control"><input type="checkbox" /></span>
+                  <span class="checkbox__label">Glitch Hop</span>
+                </div>
+                <div class="checkbox">
+                  <span class="checkbox__control"><input type="checkbox" /></span>
+                  <span class="checkbox__label">Techno</span>
+                </div>
+                <div class="checkbox">
+                  <span class="checkbox__control"><input type="checkbox" /></span>
+                  <span class="checkbox__label">Dub Techno</span>
+                </div>
+                <div class="checkbox">
+                  <span class="checkbox__control"><input type="checkbox" /></span>
+                  <span class="checkbox__label">Trance</span>
+                </div>
+                <div class="checkbox">
+                  <span class="checkbox__control"><input type="checkbox" /></span>
+                  <span class="checkbox__label">Trap</span>
+                </div>
+                <div class="checkbox">
+                  <span class="checkbox__control"><input type="checkbox" /></span>
+                  <span class="checkbox__label">Trip Hop</span>
+                </div>
+              </div>
+              <a href="#" class="genres__more"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form__line form__line--range animated slideInLeft animate-3">
+        <div class="form__line-inner">
+          <div class="form__section form__section--label">
+            <label for="fee" class="form__label">fee</label>
+            <span class="tooltip" title="Choose the minimum value of your set."></span>
+          </div>
+          <div class="form__section form__section--input">
+            <div class="form__range"></div>
+            <div class="range-labels">
+              <span class="range-label--left">From <span class="currency">$500</span></span>
+              <span class="range-label--right"><span class="currency">$5000+</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form__line animated slideInLeft animate-4">
+        <div class="form__line-inner">
+          <div class="form__section form__section--label">
+            <label for="hometown" class="form__label">Hometown</label>
+            <span class="tooltip" title="Choose your home town. This may be the city where you were born."></span>
+          </div>
+          <div class="form__section form__section--input">
+            <select class="form__input hometown" id="hometown" placeholder="Enter a city">
+              <option></option>
+              <option value="1">New York</option>
+              <option value="2">Chicago</option>
+              <option value="3">Salt Lake City</option>
+              <option value="4">New Jearsy</option>
+              <option value="5">Washington</option>
+            </select>
+            <!-- <input type="text" id="hometown" class="form__input" placeholder="Enter a city" /> -->
+            <span class="form__error">Don’t forget to enter your hometown</span>
+          </div>
+          <div class="form__section form__section--done">
+            <span class="form__done"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="form__line animated slideInLeft animate-5">
+        <div class="form__line-inner">
+          <div class="form__section form__section--label">
+            <label for="bio" class="form__label">Short BIO</label>
+            <span class="tooltip" title="Write some details about yourself."></span>
+          </div>
+          <div class="form__section form__section--input">
+            <input type="text" id="bio" class="form__input" placeholder="Tell us about yourself" />
+            <span class="form__error">Don’t forget to enter your BIO</span>
+          </div>
+          <div class="form__section form__section--done">
+            <span class="form__done"></span>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <div class="steps">
+      <a href="#" class="steps__item"></a>
+      <a href="#" class="steps__item"></a>
+      <a href="#" class="steps__item steps__item--active"></a>
+    </div>
+  </div>
+
+  <footer class="footer footer--sign-up">
+    <a href="#" class="pagination pagination--prev">Back</a>
+    <a href="#" class="pagination__name pagination__name--prev">Social Networks</a>
+    <a href="#" class="footer__get-started">Get Started</a>
+  </footer>
+</body>
+</html>

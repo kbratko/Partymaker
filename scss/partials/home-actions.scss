@@ -1,0 +1,43 @@
+.actions {
+  padding: 32px 4px 0;
+  text-align: center;
+  font-size: 0;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+
+  @include screen(tablet) {
+    right: 0;
+    padding: 13px 4px 0;
+  }
+
+  .actions__button {
+    display: inline-block;
+    margin: 0 6px;
+    @include vertical-align-one-line(32px);
+    font-size: 15px;
+    min-width: 92px;
+    @include border-radius(30px);
+
+    @include screen(tablet) {
+      font-size: 16px;
+      @include vertical-align-one-line(38px);
+      padding: 0 19px;
+      min-width: 0;
+    }
+
+    &--agency {
+      color: $regularWhite;
+      background: $green;
+    }
+
+    &--artist {
+      background: $regularWhite;
+    }
+
+    &--login {
+      border: 1px solid $regularWhite;
+      color: $regularWhite;
+    }
+  }
+}

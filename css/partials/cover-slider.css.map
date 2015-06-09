@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,aAAc;EACZ,MAAM,EAAE,KAAK;EACb,QAAQ,EAAE,QAAQ;EAElB,0BAAa;IACX,MAAM,EAAE,KAAK;EAGf,yBAAY;IACV,QAAQ,EAAE,QAAQ;IAClB,MAAM,EAAE,CAAC;IACT,WAAW,EAAE,OAAO;IACpB,UAAU,EAAE,IAAI;IAChB,MAAM,EAAE,CAAC;IACT,OAAO,EAAE,CAAC",
+"sources": ["../../scss/partials/cover-slider.scss"],
+"names": [],
+"file": "cover-slider.css"
+}

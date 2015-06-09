@@ -1,0 +1,205 @@
+.sign-up--step-3 {
+  .sign-up__title {
+    @include screen(desktop) {
+      margin-top: 52px;
+    }
+  }
+
+  .form__line {
+    @include screen(tablet) {
+      .form__section--label {
+        width: 24%;
+      }
+
+      .form__section--input {
+        width: 76%;
+      }
+    }
+  }
+  .form__line--genre {
+    .form__section {
+      vertical-align: top;
+      padding-top: 15px;
+
+      @include screen(tablet) {
+        padding-top: 35px;
+      }
+    }
+
+    .checkbox {
+      margin-bottom: 13px;
+      font-family: $light;
+      color: rgba(0,0,0,.87);
+      display: block;
+
+      @include screen(tablet) {
+        display: inline-block;
+        width: 30%;
+        font-size: 0;
+
+        .checkbox__label {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+.change-cover {
+  margin-top: 24px;
+  height: 200px;
+  background: $xxdarkGray;
+  text-align: center;
+  color: $regularWhite;
+  font-size: 18px;
+  font-family: $light;
+  position: relative;
+  margin-bottom: 100px;
+
+  @include screen(desktop) {
+    margin-top: 35px;
+  }
+
+  .change-cover__inner {
+    overflow: hidden;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    .change-cover__image {
+      display: inline-block;
+      font-size: 0;
+    }
+  }
+
+  @include screen(tablet) {
+    height: 300px;
+  }
+
+  .add-cover {
+    border: 1px solid $regularWhite;
+    background: $xxdarkGray url("../images/icons/icon-camera-small.png") no-repeat 35px 50%;
+    @include border-radius(25px);
+    padding: 8px 32px 8px 70px;
+    top: 57px;
+    text-align: left;
+    position: absolute;
+    display: block;
+    left: 50%;
+    margin-left: -123px;
+
+    @include screen(tablet) {
+      top: 50%;
+      margin-top: -30px;
+    }
+  }
+
+  .add-avatar {
+    width: 123px;
+    height: 123px;
+    border: 1px solid $regularWhite;
+    background: $xxdarkGray url("../images/icons/icon-camera-large.png") no-repeat 50%;
+    @include border-radius(50%);
+    position: absolute;
+    bottom: -62px;
+    left: 50%;
+    margin-left: -62px;
+    overflow: hidden;
+
+    @include screen(tablet) {
+      width: 150px;
+      height: 150px;
+      bottom: -75px;
+      margin-left: -75px;
+      background-image: url("../images/icons/icon-camera-xlarge.png");
+    }
+  }
+}
+
+.genres {
+  @include screen(tablet) {
+    padding-bottom: 20px;
+
+    .genres__section {
+      border-top: 1px solid $lightGray;
+      margin-top: 20px;
+      padding-top: 30px;
+      margin-right: 16px;
+
+      &--visible {
+        border: 0;
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+  }
+
+  .genres__section {
+    position: relative;
+    display: none;
+
+    &--visible {
+      display: block;
+    }
+  }
+
+  .genres__more {
+    display: block;
+    border: 1px solid $lightGray;
+    @include border-radius(20px);
+    text-align: center;
+    height: 38px;
+    line-height: 38px;
+    margin-bottom: 10px;
+    width: 230px;
+    margin-left: -70px;
+
+    &:after {
+      content: "More Genres";
+      font-size: 14px;
+      font-family: $light;
+    }
+
+    @include screen(tablet) {
+      width: 30px;
+      height: 30px;
+      margin: 0;
+      line-height: 30px;
+      position: absolute;
+      top: 36px;
+      right: 20px;
+
+      &:after,
+      &:before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        margin-left: -5px;
+        top: 50%;
+      }
+
+      &:after {
+        @include bottom-arrow(10px,6px,$darkGray);
+        margin-top: -2px;
+        z-index: 0;
+      }
+
+      &:before {
+        @include bottom-arrow(10px,6px,$regularWhite);
+        margin-top: -3px;
+        z-index: 1;
+      }
+
+      &--active:after {
+        @include top-arrow(10px,6px,$darkGray);
+        margin-top: -4px;
+      }
+
+      &--active:before {
+        @include top-arrow(10px,6px,$regularWhite);
+        margin-top: -3px;
+      }
+    }
+  }
+}

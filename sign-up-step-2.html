@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge" />
+
+  <title>Partymaker</title>
+
+  <link rel="stylesheet" href="bower_components/normalize-css/normalize.css" />
+  <link rel="stylesheet" href="bower_components/tooltipster/css/tooltipster.css" />
+  <link rel="stylesheet" href="bower_components/animate.css/animate.css" />
+  <link rel="stylesheet" href="bower_components/jquery-ui/themes/base/jquery-ui.css" />
+
+  <link rel="stylesheet" href="fonts/fonts.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/tooltipster/js/jquery.tooltipster.min.js"></script>
+  <script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
+  <script src="bower_components/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+
+  <script src="js/checkbox.js"></script>
+  <script src="js/partials/sign-up.js"></script>
+  <script src="js/script.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header header--sign-up">
+      <a href="#" class="cancel">Cancel</a>
+      <p>I'm artist</p>
+    </header>
+
+    <div class="sign-up sign-up--step-2 animated slideInLeft">
+      <h2 class="sign-up__title">Connect Social Networks</h2>
+      <h3 class="sign-up__description">No worries, we will never post anything without your permission.<br>Click on the cards below to connect.</h3>
+      <div class="socials">
+        <a href="#" class="social social--soundcloud">
+          <span class="social__name">Soundcloud</span>
+          <span class="social__description">Share your music and audio to make easier for people to discover what your sound are all about.</span>
+        </a>
+        <a href="#" class="social social--facebook">
+          <span class="social__name">Facebook <span class="social__connected">Connected</span></span>
+          <span class="social__description">Easy fill your account details and make your profile look great by connecting Facebook.</span>
+        </a>
+        <a href="#" class="social social--instagramm">
+          <span class="social__name">Instagram</span>
+          <span class="social__description">Quickly upload photos from instagram directly to your gallery and share them with fans.</span>
+        </a>
+      </div>
+      <div class="social__info">
+        You need to connect at least one of  your Soundcloud or Facebook account.<br>But if you connect all, you will be have more opportunities and feedbacks.
+      </div>
+    </div>
+
+    <div class="steps">
+      <a href="#" class="steps__item"></a>
+      <a href="#" class="steps__item steps__item--active"></a>
+      <a href="#" class="steps__item"></a>
+    </div>
+  </div>
+
+  <footer class="footer footer--sign-up">
+    <a href="#" class="pagination pagination--prev">Back</a>
+    <a href="#" class="pagination__name pagination__name--prev">Create Account</a>
+    <a href="#" class="pagination pagination--next">Next</a>
+    <a href="#" class="pagination__name pagination__name--next">Social Networks</a>
+  </footer>
+</body>
+</html>

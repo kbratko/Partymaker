@@ -1,0 +1,24 @@
+.form__range {
+  border: 0;
+  border-radius: 0;
+  height: 2px;
+  background: $xxlightGray;
+
+  .ui-slider-handle {
+    @include border-radius(50%);
+    width: 20px;
+    height: 20px;
+    border: 1px solid $lightGreen;
+    background: $regularWhite;
+    top: -9px;
+    touch-action: auto;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .ui-slider-range {
+    background: $lightGreen;
+  }
+}

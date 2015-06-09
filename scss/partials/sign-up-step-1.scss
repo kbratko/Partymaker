@@ -1,0 +1,33 @@
+.sign-up--step-1 {
+  .sign-up__title {
+    padding: 0 20px;
+
+    @include screen(tablet) {
+      margin-top: 90px;
+    }
+
+    @include screen(desktop) {
+      margin-top: 53px;
+    }
+  }
+
+  .sign-up__description {
+    margin: 20px 35px 30px;
+
+    @include screen(tablet) {
+      margin: 10px 0 95px;
+    }
+
+    @include screen(desktop) {
+      margin: 12px 0 50px;
+    }
+  }
+
+  & + .steps {
+    margin: 137px 0;
+
+    @include screen(desktop) {
+      margin: 50px 0;
+    }
+  }
+}

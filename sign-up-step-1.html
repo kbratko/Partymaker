@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge" />
+
+  <title>Partymaker</title>
+
+  <link rel="stylesheet" href="bower_components/normalize-css/normalize.css" />
+  <link rel="stylesheet" href="bower_components/tooltipster/css/tooltipster.css" />
+  <link rel="stylesheet" href="bower_components/animate.css/animate.css" />
+  <link rel="stylesheet" href="bower_components/jquery-ui/themes/base/jquery-ui.css" />
+
+  <link rel="stylesheet" href="fonts/fonts.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/tooltipster/js/jquery.tooltipster.min.js"></script>
+  <script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
+  <script src="bower_components/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+
+  <script src="js/checkbox.js"></script>
+  <script src="js/partials/sign-up.js"></script>
+  <script src="js/script.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header header--sign-up">
+      <a href="#" class="cancel">Cancel</a>
+      <p>I'm artist</p>
+    </header>
+    <form action="#" class="form sign-up sign-up--step-1 animated slideInLeft">
+      <h2 class="sign-up__title">Creare account</h2>
+      <h3 class="sign-up__description">Getting in is easy. Use this form if you are DJ / producer / live artist.</h3>
+      <div class="form__line animated slideInLeft animate-1">
+        <div class="form__line-inner">
+          <div class="form__section form__section--label">
+            <label for="email" class="form__label">Email</label>
+            <span class="tooltip" title="Use this to log in to your account, receive notifications and get handy updates from us. "></span>
+          </div>
+          <div class="form__section form__section--input">
+            <input type="email" id="email" class="form__input" placeholder="email@example.com" />
+            <span class="form__error">Don’t forget to enter your email</span>
+          </div>
+          <div class="form__section form__section--done">
+            <span class="form__done"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="form__line animated slideInLeft animate-2">
+        <div class="form__line-inner">
+          <div class="form__section form__section--label">
+            <label for="phone" class="form__label">Phone</label>
+            <span class="tooltip" title="This is used for identify you, what you are real person. We will not use your phone number anywher."></span>
+          </div>
+          <div class="form__section form__section--input">
+            <input type="tel" id="phone" class="form__input" placeholder="07 123 45 67 89" />
+            <span class="form__error">Don’t forget to enter your phone</span>
+          </div>
+          <div class="form__section form__section--done">
+            <span class="form__done"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="form__line animated slideInLeft animate-3">
+        <div class="form__line-inner">
+          <div class="form__section form__section--label">
+            <label for="password" class="form__label">Password</label>
+            <span class="tooltip" title="Pick one that's hard-to-crack, only known by you, and at least 6 characters long."></span>
+          </div>
+          <div class="form__section form__section--input">
+            <input type="password" id="password" class="form__input" placeholder="Minimum 6 characters" />
+            <span class="form__error">Don’t forget to enter your password</span>
+          </div>
+          <div class="form__section form__section--done">
+            <span class="form__done"></span>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <div class="steps">
+      <a href="#" class="steps__item steps__item--active"></a>
+      <a href="#" class="steps__item"></a>
+      <a href="#" class="steps__item"></a>
+    </div>
+  </div>
+  <footer class="footer footer--sign-up">
+    <a href="#" class="pagination pagination--next">Next</a>
+    <a href="#" class="pagination__name pagination__name--next">Social Networks</a>
+  </footer>
+</body>
+</html>

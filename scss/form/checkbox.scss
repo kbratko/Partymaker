@@ -1,0 +1,41 @@
+.checkbox {
+  display: inline-block;
+  vertical-align: top;
+
+  .checkbox__control {
+    width: 18px;
+    height: 18px;
+    background: url("../images/controls/checkbox-2x.png") no-repeat 0 -19px;
+    background-size: 18px auto;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 7px 0 1px;
+    cursor: pointer;
+
+    &--checked {
+      background-position: 0 0;
+    }
+
+    input {
+      margin-left: -100px;
+    }
+
+    @include screen(tablet) {
+      width: 30px;
+      height: 30px;
+      background-size: 30px auto;
+      background-position: 0 -33px;
+
+      &--checked {
+        background-position: 0 0;
+      }
+    }
+  }
+
+  .checkbox__label {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 17px;
+  }
+}

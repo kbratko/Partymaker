@@ -1,0 +1,14 @@
+{
+  "name": "jquery-before-after",
+  "homepage": "https://github.com/bencorlett/jquery-before-after",
+  "_release": "80d6e6c33e",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "80d6e6c33e26d5330fe6baba1e8a4bf96f967b87"
+  },
+  "_source": "git://github.com/bencorlett/jquery-before-after.git",
+  "_target": "*",
+  "_originalSource": "jquery-before-after",
+  "_direct": true
+}

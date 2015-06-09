@@ -1,0 +1,86 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html,
+body {
+  font-size: $baseFontSize;
+  font-family: $regular;
+  color: $main;
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-weight: normal;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  border: 0;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+button,
+input[type="submit"],
+input[type="reset"], 
+textarea {
+  border: 0;
+  background: transparent;
+  border-radius: 0; /* Eliminate border-radius on mobile devices */
+  padding: 0;
+  resize: none;
+  width: 100%;
+  color: $main;
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+::-webkit-input-placeholder {color: $xxlightGray;}
+:-moz-placeholder {color: $xxlightGray; opacity: 1;}
+::-moz-placeholder {color: $xxlightGray; opacity: 1;}
+:-ms-input-placeholder {color: $xxlightGray;}  
+
+:-moz-ui-invalid:not(output) {
+    box-shadow: none;
+}
+
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  padding-bottom: 44px;
+  height: 100%;
+
+  @include screen(tablet) {
+    padding-bottom: 100px;
+  }
+
+  @include screen(desktop) {
+    padding-bottom: 110px;
+  }
+}

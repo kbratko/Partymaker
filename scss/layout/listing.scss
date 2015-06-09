@@ -1,0 +1,159 @@
+.listings {
+  @include screen(desktop) {
+    padding: 0 92px;
+  }
+
+  @include screen(xDesktop) {
+    padding: 0 116px;
+  }
+}
+
+.listing {
+  text-align: center;
+  padding-bottom: 41px;
+  font-size: 0;
+
+  @include screen(tablet) {
+    float: left;
+    width: 50%;
+    text-align: left;
+    padding-bottom: 0;
+    padding: 0 17px;
+
+    .tabs__content--events & {
+      min-height: 541px;
+    }
+
+    .tabs__content--artists & {
+      min-height: 512px;
+    }
+  }
+
+  @include screen(desktop) {
+    padding: 0 24px;
+
+    .tabs__content--events,
+    .tabs__content--artists & {
+      min-height: 540px;
+    }
+  }
+
+  @include screen(xDesktop) {
+    .tabs__content--artists & {
+      width: 25%;
+    }
+  }
+
+  .listing__cover {
+    position: relative;
+    height: 280px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: auto;
+      position: absolute;
+      z-index: 0;
+    }
+
+    @include screen(tablet) {
+      height: 180px;
+    }
+
+    .listing__date {
+      z-index: 1;
+      background: rgba(0,0,0,.6);
+      position: absolute;
+      font-size: 16px;
+      color: $regularWhite;
+      left: 0;
+      bottom: 24px;
+      padding: 11px 16px;
+      text-align: left;
+      min-width: 150px;
+
+      @include screen(xDesktop) {
+        font-size: 14px;
+      }
+
+      .date {
+        font-family: $light;
+
+        .date__day {
+          font-size: 42px;
+        }
+
+        .date__month,
+        .date__year {
+          font-size: 24px;
+        }
+      } 
+    }
+  }
+
+  .listing__title {
+    font-size: 32px;
+    font-family: $light;
+    padding: 19px 0 0;
+
+    @include screen(xDesktop) {
+      font-size: 42px;
+    }
+  }
+
+  .listing__description {
+    font-size: 18px;
+    font-family: $light;
+    padding: 11px 20px;
+    line-height: 25px;
+
+    a {
+      color: $blue;
+    }
+
+    @include screen(tablet) {
+      padding: 11px 0;
+    }
+  }
+
+  .listing__fee {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: $darkGray;
+    margin-top: 10px;
+  }
+
+  .listing__price {
+    display: block;
+    font-size: 30px;
+    font-family: $light;
+    color: $lightBrown;
+  }
+
+  .listing__button {
+    display: inline-block;
+    color: $regularWhite;
+    font-size: 18px;
+    background: $green;
+    @include border-radius(25px);
+    padding: 0 24px;
+    @include vertical-align-one-line(42px);
+    margin-top: 16px;
+  }
+
+  .listibg__available {
+    color: $orange;
+    font-size: 18px;
+    font-family: $light;
+    margin-top: 20px;
+
+    &:before {
+      display: inline-block;
+      content: "";
+      background: url("../images/icons/icon-clock.png") no-repeat;
+      width: 13px;
+      height: 12px;
+      margin-right: 10px;
+    }
+  }
+}

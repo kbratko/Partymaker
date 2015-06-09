@@ -1,0 +1,44 @@
+.tooltip {
+  position: relative;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: url("../images/icons/icon-help-2x.png") no-repeat;
+  background-size: 18px 18px;
+
+  @include screen(tablet) {
+    width: 15px;
+    height: 15px;
+    background: url("../images/icons/icon-help-768.png") no-repeat;
+    background-size: 15px 15px;
+  }
+}
+
+.tooltipster-default {
+  background: rgba(0,0,0,.8);
+  padding: 9px 16px;
+  @include border-radius(4px);
+  border: 0;
+  max-width: 80%;
+
+  @media (min-width: 390px) {
+    & {
+      max-width: 340px;
+    }
+  }
+
+  @include screen(tablet) {
+    padding: 15px 16px;
+  }
+
+  .tooltipster-content {
+    font-family: $regular;
+    font-size: $baseFontSize;
+    padding: 0;
+
+    @include screen(tablet) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+}
