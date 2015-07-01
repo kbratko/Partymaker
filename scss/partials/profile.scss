@@ -1,0 +1,745 @@
+.actions__profile {
+  background: $regularWhite;
+  padding: 10px 10px 10px 0;
+  text-align: right;
+  position: relative;
+  font-family: $light;
+
+  @include screen(tablet) {
+    padding: 13px 22px 13px 0;
+  }
+
+  .actions__button {
+    text-align: center;
+    width: auto;
+    min-width: 0;
+    margin: 0 20px 0 0;
+    vertical-align: middle;
+
+    @include screen(tablet) {
+      margin-right: 12px;
+    }
+
+    &--edit {
+      border: 1px solid #d9d9d9;
+      width: 101px;
+
+      @include screen(tablet) {
+        width: auto;
+        color: $xxx-lightgray;
+        padding: 0 21px;
+      }
+    }
+  }
+
+  .account {
+    vertical-align: middle;
+    display: inline-block;
+    position: relative;
+
+    .account__photo {
+      width: 36px;
+      height: 36px;
+      @include border-radius(50%);
+    }
+  }
+
+  .account__dropdown {
+    background: $regularWhite;
+    @include border-radius(5px);
+    border: 1px solid $xxxlightGray;
+    position: absolute;
+    width: 230px;
+    right: 0px;
+    top: 45px;
+    padding: 10px 0;
+
+    &:before,
+    &:after {
+      display: block;
+      position: absolute;
+      content: "";
+      right: 7px;
+    }
+
+    &:before {
+      @include top-arrow (17px, 10px, $xxxlightGray);
+      top: -10px;
+    }
+
+    &:after {
+      @include top-arrow (17px, 10px, $regularWhite);
+      top: -8px;
+    }
+
+    .account__dropdown-item {
+      display: block;
+      font-family: $light;
+      font-size: 16px;
+      text-align: left;
+      @include vertical-align-one-line (32px);
+      background: url("../images/icons/icons-profile.png") no-repeat;
+      padding-left: 50px;
+
+      &.my-profile {
+        background-position: 19px 5px;
+      }
+
+      &.settings {
+        background-position: 19px -30px;
+      }
+
+      &.sign-out {
+        background-position: 19px -67px;
+      }
+
+      &:hover {
+        background-color: $xx-lightgray;
+        text-decoration: none;
+
+        &.my-profile {
+          background-position: 19px -101px;
+        }
+
+        &.settings {
+          background-position: 19px -136px;
+        }
+
+        &.sign-out {
+          background-position: 19px -173px;
+        }
+      }
+    }
+  }
+}
+
+.profile-cover {
+  height: 200px;
+  position: relative;
+
+  @include screen(tablet) {
+    height: 300px;
+  }
+
+  .profile-cover__image {
+    width: auto;
+    height: 100%;
+    min-width: 100%;
+  }
+
+  .profile-cover__photo {
+    width: 152px;
+    border: 1px solid $regularWhite;
+    @include border-radius(50%);
+    overflow: hidden;
+    height: 152px;
+    background: $regularBlack;
+    position: absolute;
+    bottom: -76px;
+    left: 50%;
+    margin-left: -76px;
+
+    img {
+      width: auto;
+      height: 100%;
+    }
+  }
+}
+
+.profile__info {
+  text-align: center;
+  padding: 70px 14px;
+  font-family: $light;
+  font-size: 18px;
+
+  @include screen(tablet) {
+    padding: 83px 14px 55px;
+  }
+  
+  .name {
+    font-size: 32px;
+    margin-top: 20px;
+
+    @include screen(tablet) {
+      font-size: 52px;
+    }
+  }
+
+  .location {
+    color: $xxxxdarkGray;
+    margin-top: 7px;
+  }
+
+  .description {
+    margin-top: 20px;
+    line-height: 26px;
+    padding: 0 10px;
+
+    @include screen(tablet) {
+      max-width: 840px;
+      margin: 16px auto 0;
+    }
+  }
+
+  .genre {
+    margin-top: 16px;
+  }
+
+  .fee {
+    font-size: 14px;
+    font-family: $regular;
+    margin-top: 20px;
+  }
+
+  .price {
+    color: $lightBrown;
+    font-size: 30px;
+
+    @include screen(tablet) {
+      font-size: 48px;
+    }
+  }
+}
+
+.profile-events {
+  .title {
+    text-align: center;
+    font-size: 24px;
+    font-family: $light;
+    padding-top: 112px;
+    padding-bottom: 13px;
+    background: url("../images/icons/icon-events-profile.png") no-repeat 50% 50px $x-lightgray;
+
+    @include screen(tablet) {
+      padding-top: 165px;
+      padding-bottom: 44px;
+      font-size: 32px;
+      background: url("../images/icons/icon-events-profile-middle.png") no-repeat 50% 68px $x-lightgray;
+    }
+
+    @include screen(sDesktop) {
+      font-size: 42px;
+    }
+  }
+
+  .listings {
+    @include clearfix;
+
+    @include screen(tablet) {
+      padding: 0 18px;
+      max-width: 840px;
+      margin: 0 auto;
+    }
+
+    @include screen(desktop) {
+      padding: 0;
+    }
+
+    @include screen(sDesktop) {
+      max-width: 1034px;
+    }
+
+    @include screen(xlDesktop) {
+      max-width: 1380px;
+    }
+  }
+
+  .listing {
+    padding-bottom: 0;
+    margin-top: 31px;
+
+    @include screen(tablet) {
+      padding: 0 18px;
+      margin-top: 0px;
+      margin-bottom: 31px;
+      min-height: 360px;
+    }
+
+    @include screen(desktop) {
+      padding: 0 24px 0 0;
+
+      &:nth-child(2n) {
+        padding: 0 0 0 24px;
+      }
+    }
+
+    @include screen(xlDesktop) {
+      width: 33.3%;
+      padding: 0 24px 0 0;
+
+      &:nth-child(2n) {
+        padding: 0 24px 0 24px;
+      }
+
+      &:nth-child(3n) {
+        padding: 0 0 0 24px;
+      }
+    }
+  }
+
+  .more {
+    margin: 0 20px;
+
+    @include screen(tablet) {
+      max-width: 200px;
+      margin: 38px auto;
+    }
+  }
+}
+
+.more {
+  font-size: 16px;
+  color: $xxxxdarkGray;
+  border: $lightGray 1px solid;
+  @include vertical-align-one-line(40px);
+  display: block;
+  text-align: center;
+  @include border-radius(25px);
+  font-family: $light;
+  clear: both;
+
+  i {
+    position: relative;
+    top: -5px;
+
+    &:before,
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      right: -18px;
+    }
+
+    &:after {
+      @include bottom-arrow (13px, 7px, $regularWhite);
+      top: 9px;
+    }
+
+    &:before {
+      @include bottom-arrow (13px, 7px, $xxxxdarkGray);
+      top: 10px;
+    }
+  }
+}
+
+.profile-music,
+.profile-photo {
+  background: $xx-lightgray;
+  margin-top: 59px;
+  padding-bottom: 55px;
+
+  .title {
+    text-align: center;
+    font-size: 24px;
+    font-family: $light;
+    padding-top: 118px;
+    padding-bottom: 36px;
+    background: url("../images/icons/icon-music-profile.png") no-repeat 50% 56px;
+
+    @include screen(tablet) {
+      font-size: 32px;
+      padding-top: 159px;
+      background: url("../images/icons/icon-music-profile-middle.png") no-repeat 50% 66px;
+    }
+
+    @include screen(sDesktop) {
+      font-size: 42px;
+    }
+  }
+
+  .cloud {
+    display: none;
+    text-align: center;
+    font-family: $light;
+    font-size: 18px;
+    margin-top: 95px;
+
+    @include screen(tablet) {
+      margin-top: 49px;
+      font-size: 24px;
+    }
+
+    @include screen(sDesktop) {
+      margin-top: 43px;
+    }
+
+    .cloud__title {
+      font-size: 32px;
+
+      @include screen(tablet) {
+        font-size: 52px;
+      }
+
+      @include screen(sDesktop) {
+        font-size: 64px;
+      }
+    }
+
+    .cloud__description {
+      margin-top: 16px;
+      line-height: 25px;
+      padding: 0 30px;
+
+      @include screen(tablet) {
+        margin-top: 24px;
+        line-height: 31px;
+      }
+
+      @include screen(desktop) {
+        max-width: 664px;
+        margin: 24px auto 0;
+      }
+
+      @include screen(sDesktop) {
+        margin: 12px auto 0;
+      }
+    }
+  
+    .cloud__link {
+      color: $blue;
+      display: inline-block;
+      position: relative;
+      padding-right: 15px;
+      margin-top: 12px;
+      margin-bottom: 30px;
+
+      @include screen(tablet) {
+        margin-top: 23px;
+      }
+
+      &:before,
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 6px;
+      }
+
+      &:before {
+        @include right-arrow (6px, 11px, $blue);
+        right: 0;
+      }
+
+      &:after {
+        @include right-arrow (6px, 11px, $regularWhite);
+        right: 1px;
+      }
+    }
+    
+    .cloud__track {
+      margin: 40px auto 0;
+      width: 288px;
+      height: 161px;
+      background-repeat: no-repeat;
+
+      @include screen(tablet) {
+        width: 693px;
+        height: 183px;
+        margin: 63px auto 0;
+      }
+
+      @include screen(desktop) {
+        width: 933px;
+        height: 199px;
+        margin: 63px auto 0;
+      }
+
+      &--1 {
+        background-image: url("../images/bg/track-1.png");
+
+        @include screen(tablet) {
+          background-image: url("../images/bg/track-1-middle.png");
+        }
+
+        @include screen(desktop) {
+          background-image: url("../images/bg/track-1-large.png");
+        }
+      }
+
+      &--2 {
+        background-image: url("../images/bg/track-2.png");
+
+        @include screen(tablet) {
+          background-image: url("../images/bg/track-2-middle.png");
+        }
+
+        @include screen(desktop) {
+          background-image: url("../images/bg/track-2-large.png");
+        }
+      }
+    }
+
+    .connect {
+      font-size: 16px;
+      border: $lightGray 1px solid;
+      @include vertical-align-one-line(40px);
+      display: block;
+      @include border-radius(25px);
+      font-family: $light;
+      margin: 78px auto 0;
+      max-width: 382px;
+      text-align: center;
+      clear: both;
+      background: url("../images/icons/icon-connect-soundcloud.png") no-repeat 25px 50%;
+
+      @include screen(tablet) {
+        @include vertical-align-one-line(55px);
+        font-size: 20px;
+        margin-top: 93px;
+        padding-left: 30px;
+        background: url("../images/icons/icon-connect-soundcloud-middle.png") no-repeat 31px 50%;
+      }
+
+      @include screen(desktop) {
+        margin-top: 76px;
+      }
+
+      i {
+        position: relative;
+        top: -5px;
+
+        &:before,
+        &:after {
+          content: "";
+          display: block;
+          top: 6px;
+          position: absolute;
+
+          @include screen(tablet) {
+            top: 8px;
+          }
+        }
+
+        &:after {
+          @include right-arrow (8px, 14px, $xx-lightgray);
+          right: -16px;
+        }
+
+        &:before {
+          @include right-arrow (8px, 14px, $xxxxdarkGray);
+          right: -17px;
+        }
+      }
+    }
+  }
+
+  &--empty {
+    background: url("../images/bg/wave.png") no-repeat 50% 123px $xx-lightgray;
+
+    @include screen(tablet) {
+      background: url("../images/bg/wave-middle.png") no-repeat 50% 90px $xx-lightgray;
+    }
+
+    @include screen(sDesktop) {
+      background: url("../images/bg/wave-middle.png") no-repeat 50% 103px $xx-lightgray;
+    }
+
+    .title {
+      padding-bottom: 44px;
+    }
+
+    .cloud {
+      display: block;
+    }
+
+    .soundcloud,
+    .cloud__slider--full {
+      display: none;
+    }
+  }
+
+  .soundcloud {
+    padding: 0 15px;
+
+    .soundcloud__demo {
+      margin-bottom: 12px;
+    }
+
+    .more {
+      margin-top: 44px;
+    }
+  }
+}
+
+.cloud__slider {
+  margin-top: 40px;
+  height: 280px;
+  overflow: hidden;
+
+  @include screen(tablet) {
+    margin-top: 66px;
+    overflow: visible;
+    @include clearfix;
+    margin-left: -8px;
+    height: auto;
+
+    .cloud__slider-item {
+      margin-left: 8px;
+      float: left;
+      margin-bottom: 8px;
+      width: calc(50% - 8px);
+      max-height: 280px;
+      overflow: hidden;
+
+      @include screen(sDesktop) {
+        width: calc(25% - 8px);
+      }
+    }
+  }
+
+  img {
+    min-height: 100%;
+    width: auto;
+    max-width: none;
+    min-width: 100%;
+  }
+
+  .slick-prev,
+  .slick-next {
+    display: block;
+    background: url("../images/controls/cloud-slider-arrows.png") no-repeat 0px 0px;
+    position: absolute;
+    width: 26px;
+    height: 47px;
+    top: 50%;
+    margin-top: -24px;
+  }
+
+  .slick-prev {
+    left: 15px;
+  }
+
+  .slick-next {
+    right: 15px;
+    background-position: 100%;
+  }
+}
+
+.profile-photo {
+  margin-top: 0;
+  background: $regularWhite;
+
+  &--empty {
+    .title {
+      padding-bottom: 36px;
+    }
+  }
+
+  .title {
+    background: url("../images/icons/icon-photo-profile.png") no-repeat 50% 56px;
+    padding-bottom: 53px;
+
+    @include screen(tablet) {
+      padding-top: 165px;
+      background: url("../images/icons/icon-photo-profile-middle.png") no-repeat 50% 78px;
+    }
+  }
+
+  .cloud {
+    @include screen(tablet) {
+      margin-top: 40px;
+    }
+
+    @include screen(sDesktop) {
+      margin-top: 31px;
+    }
+
+    .connect {
+      background: url("../images/icons/icon-connect-instagram.png") no-repeat 42px 50%;
+      margin-top: 56px;
+
+      @include screen(tablet) {
+        margin-top: 92px;
+        background: url("../images/icons/icon-connect-instagram-middle.png") no-repeat 31px 50%;
+      }
+    }
+  }
+
+  &--empty {
+    background: url("../images/bg/ribbon.png") no-repeat 50% -18px $regularWhite;
+
+    @include screen(tablet) {
+      background-position: 50% 67px;
+    }
+  }
+}
+
+// If footer repeates on other pages move this styles from partials to reusables
+.footer {
+  background: $xx-lightgray;
+  text-align: center;
+  font-size: 16px;
+  font-family: $light;
+  padding: 37px 0;
+  @include clearfix;
+
+  @include screen(tablet) {
+    padding: 25px 35px;
+  }
+
+  @include screen(xDesktop) {
+    padding: 25px 47px;
+
+    .footer__inner {
+      max-width: 1034px;
+      margin: 0 auto;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: inline-block;
+    }
+  }
+
+  .footer__nav {
+    color: $xxxxdarkGray;
+
+    @include screen(tablet) {
+      float: left;
+      margin-top: 10px;
+    }
+
+    a {
+      display: block;
+      margin: 0 12px;
+    }
+  }
+
+  .footer__socials {
+    margin-top: 20px;
+
+    @include screen(tablet) {
+      float: right;
+      margin-top: 0;
+    }
+
+    .social {
+      background: url("../images/icons/icon-socials.png") no-repeat;
+      width: 36px;
+      height: 36px;
+      display: block;
+      margin: 0 4px;
+
+      &--facebook {
+        background-position: 0 0;
+      }
+
+      &--instagram {
+        background-position: -47px 0;
+      }
+
+      &--twitter {
+        background-position: -95px 0;
+      }
+
+      &--linkedin {
+        background-position: -143px 0;
+      }
+    }
+  }
+}

@@ -51,8 +51,14 @@
 }
 
 @mixin screen($point) {
+  @if $point == xlDesktop {
+    @media (min-width: 1680px) { @content; }
+  }
   @if $point == xDesktop {
     @media (min-width: 1440px) { @content; }
+  }
+  @if $point == sDesktop {
+    @media (min-width: 1260px) { @content; }
   }
   @if $point == desktop {
     @media (min-width: 1025px) { @content; }
